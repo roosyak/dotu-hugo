@@ -1,0 +1,4 @@
+baseURL = "https://dotu.yaruslan.ru/"
+languageCode = "en-us"
+title = "ДОТУ"
+theme = "hugo-theme-techdoc"
