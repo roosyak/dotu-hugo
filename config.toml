@@ -6,3 +6,25 @@ theme = "clr"
 [permalinks]
 	page = "/:title/"
 	about = "/:filename/"
+
+[menu]
+  [[menu.main]]
+    name = "#"
+    url = "/"
+	 weight = 10
+
+  [[menu.main]]
+    name = "Оглавление" 
+    url = "/posts/"
+	 weight= 20
+
+  [[menu.main]]
+    name = "В жизни" 
+    url = "/in-live/" 
+	 weight= 30
+
+  [[menu.main]]
+    name = "О проекте" 
+    url = "/about/" 
+	 weight= 40
+ 
