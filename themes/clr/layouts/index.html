@@ -1,0 +1,18 @@
+{{ partial "header.html" . }}
+Список страниц:
+<ul>
+	{{ range first 100 .Data.Pages }}
+	{{ if ne .Type "page"}}
+	<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+	{{ end }}
+	{{ end }}
+</ul>
+
+---
+
+{{ range .Data.Pages }}
+{{ if eq .Type "page" }}
+<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+{{ end }}
+{{ end }}
+{{ partial "footer.html" . }}

@@ -1,4 +1,8 @@
-baseURL = "https://dotu.yaruslan.ru/"
+baseURL = ""
 languageCode = "en-us"
-title = "ДОТУ"
-theme = "hugo-theme-techdoc"
+title = "My Test"
+theme = "clr"
+
+[permalinks]
+	page = "/:title/"
+	about = "/:filename/"
