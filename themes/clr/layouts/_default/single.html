@@ -1,6 +1,17 @@
 {{ partial "header.html" . }}
+
 <article> 
 	<h1>{{.Title}}</h1> 
 	{{.Content}}
 </article>
+
+<ul>
+{{ with .NextInSection }}
+<li>Предыдущая глава: <a href="{{ .Permalink }}">{{ .Title }}</a></li>
+{{ end }}
+{{ with .PrevInSection }}
+<li>Слудующая глава: <a href="{{ .Permalink }}">{{ .Title }}</a></li>
+{{ end }}
+</ul>
+
 {{ partial "footer.html" . }}
