@@ -3,7 +3,23 @@
 	margin: 0 auto;
 }
 
+body {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF UI Text", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+}
+
 img{
 	max-width: 100%;
 	width: auto;
+}
+
+a {
+	color: #0060a0;
+	text-decoration: none;
+	border-bottom: 1px solid #0060a080;
+}
+sup a{
+	text-decoration: none;
+	border-bottom: none;
 }
