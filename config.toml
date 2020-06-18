@@ -1,7 +1,8 @@
-baseURL = ""
+baseURL = "https://dotu.yaruslan.ru"
 languageCode = "en-us"
-title = "My Test"
+title = "ДОТУ"
 theme = "clr"
+enableRobotsTXT = "true"
 
 [menu]
 	[[menu.main]]
