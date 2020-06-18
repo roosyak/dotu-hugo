@@ -1,4 +1,4 @@
-name: github pages
+name: Hugo to GithubPages
 
 on:
   push:
