@@ -2,7 +2,7 @@
 <footer>
 	<nav>
 		{{ range .Site.Menus.main }}
-		<a href="{{ .URL }}">{{ .Name }}</a> &nbsp;
+		<a href="{{ $.Site.BaseURL }}{{ .URL }}">{{ .Name }}</a> &nbsp;
 		{{ end }}
 		<a href="http://dotu.ru/2011/06/26/20110626-dotu_red-2011/" target="_blank">dotu.ru</a>
 	</nav>

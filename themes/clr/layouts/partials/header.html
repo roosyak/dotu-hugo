@@ -10,8 +10,11 @@
 
 <body>
 	<div class=" centr">
+		
+	<header>
 		<nav>
 		{{ range .Site.Menus.main }}
 		<a href="{{ $.Site.BaseURL }}{{ .URL }}" >{{ .Name }}</a> &nbsp; 
 		{{ end }}
 		</nav>
+	</header>
