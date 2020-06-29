@@ -3,4 +3,14 @@
 <article>
 	{{.Content}}
 </article>
+
+{{ with .Site.GetPage "/p" }}
+<ul>
+	{{ range .Pages }}
+	<li>
+		<a href="{{.Permalink}}">{{.Title}}</a>
+	</li>
+	{{ end }}
+</ul>
+{{ end }}
 {{ partial "footer.html" . }}
