@@ -23,3 +23,8 @@ sup a{
 	text-decoration: none;
 	border-bottom: none;
 }
+
+header .form-search{
+	float: right;
+	max-width: 300px;
+}
