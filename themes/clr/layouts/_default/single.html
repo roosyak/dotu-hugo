@@ -6,11 +6,12 @@
 </article>
 
 <ul>
+<li><a href="/#оглавление">Оглавление</a></li>
 {{ with .NextInSection }}
-<li>Предыдущая глава: <a href="{{ .Permalink }}">{{ .Title }}</a></li>
+<li>Предыдущая: <a href="{{ .Permalink }}">{{ .Title }}</a></li>
 {{ end }}
 {{ with .PrevInSection }}
-<li>Слудующая глава: <a href="{{ .Permalink }}">{{ .Title }}</a></li>
+<li>Слудующая: <a href="{{ .Permalink }}">{{ .Title }}</a></li>
 {{ end }}
 </ul>
 
