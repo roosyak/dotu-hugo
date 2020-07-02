@@ -1,16 +1,8 @@
 {{ partial "header.html" . }}
 
 <article>
+	<h1>{{.Title}}</h1>
 	{{.Content}}
 </article>
 
-{{ with .Site.GetPage "/p" }}
-<ul>
-	{{ range .Pages }}
-	<li>
-		<a href="{{.Permalink}}">{{.Title}}</a>
-	</li>
-	{{ end }}
-</ul>
-{{ end }}
 {{ partial "footer.html" . }}
