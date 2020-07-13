@@ -34,5 +34,17 @@ header nav{
 
 header .form-search{
 	float: right;
-	max-width: 300px;
+	max-width: 350px;
+	width: 100%;
+}
+
+header .form-search input[type=search]{
+	width: calc(100% - 65px);
+}
+
+@media screen and (max-width: 550px) {
+	header .form-search{
+		max-width: 100%;
+		margin-top: .5em;
+	}
 }
