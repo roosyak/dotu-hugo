@@ -23,6 +23,15 @@ sup a{
 	border-bottom: none;
 }
 
+header:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+header nav{
+	float: left;
+}
+
 header .form-search{
 	float: right;
 	max-width: 300px;
