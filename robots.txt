@@ -1,3 +1,6 @@
+Sitemap: https://dotu.yaruslan.ru/sitemap.xml
 User-agent: *
 Allow: /
-Sitemap: https://dotu.yaruslan.ru/sitemap.xml
+Disallow: /s/
+Disallow: /categories/
+Disallow: /tags/
