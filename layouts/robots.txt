@@ -1,3 +1,6 @@
+Sitemap: {{ $.Site.BaseURL }}/sitemap.xml
 User-agent: *
 Allow: /
-Sitemap: {{ $.Site.BaseURL }}/sitemap.xml
+Disallow: /s/
+Disallow: /categories/
+Disallow: /tags/
