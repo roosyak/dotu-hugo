@@ -12,6 +12,11 @@ body {
 img{
 	max-width: 100%;
 	width: auto;
+	margin: 0 auto; 
+	display: block;
+}
+img+center{
+	font-size: .88em;
 }
 
 a {
