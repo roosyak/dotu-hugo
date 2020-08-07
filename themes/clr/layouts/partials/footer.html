@@ -1,7 +1,7 @@
 </div>
 
 <script>
-	document.querySelectorAll("p img").forEach(function(e) {
+	document.querySelectorAll("p img, li img").forEach(function(e) {
 		var s = document.createElement('center');
 		s.innerText = e.getAttribute("alt"); 
 		e.insertAdjacentElement('afterend', s);
