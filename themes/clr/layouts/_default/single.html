@@ -1,13 +1,36 @@
 {{ partial "header.html" . }}
 
-<article>
-	<h1>{{.Title}}</h1>
-	{{.Content}}
+<article itemid="{{ .Permalink | absURL }}" itemscope itemtype="http://schema.org/Article">
+	<h1 itemprop="headline">{{.Title}}</h1>
+	<div itemprop="articleBody">
+		{{.Content}}
+	</div>
+
+	<meta itemprop="author" content="{{.Site.Params.Author}}">
+	<meta itemprop="datePublished" content="{{.Date}}">
+	{{ if .Params.image }}
+	<meta itemprop="image" content="{{ .Site.BaseURL }}{{ .Params.image  }}">
+	{{ else }}
+	<meta itemprop="image" content="{{ .Site.BaseURL }}{{ .Site.Params.image}}">
+	{{ end }}
+	{{ with .Keywords }}
+	<meta itemprop="keywords" content="{{ range $i, $e := . }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}">
+	{{ end }}
+
+	{{ if .Params.PageStart }}
+	<meta itemprop="pageStart" content="{{ .Params.PageStart }}">
+	{{ end }}
+
+	{{ if .Params.Position }}
+	<meta itemprop="position" content="{{ .Params.Position }}">
+	{{ end }}
+	<!--meta itemprop="articleSection" content="{{.Title}}"-->
+	<!--meta itemprop="" content="123"-->
 </article>
 
 <nav>
 	<ul>
-		<li><a href="/#оглавление">Оглавление</a></li>
+		<li><a href="{{ .Site.BaseURL }}/#оглавление">Оглавление</a></li>
 		{{ with .NextInSection }}
 		<li>Предыдущая: <a href="{{ .Permalink }}">{{ .Title }}</a></li>
 		{{ end }}

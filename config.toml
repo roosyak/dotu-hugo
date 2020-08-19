@@ -2,3 +2,7 @@ baseURL = "https://dotu.yaruslan.ru"
 title = "ДОТУ"
 theme = "clr"
 enableRobotsTXT = "true"
+
+[params]
+	author = "ВП СССР"
+	image = "/p/dotu-main.jpg"
