@@ -1,13 +1,20 @@
 {{ partial "header.html" . }}
 <article>
-	<h1>{{.Title}}</h1>	
+	<h1>{{.Title}}</h1>
 	{{.Content}}
 </article>
+
+{{if .Params.Position }}
+<ol>
+	{{ range  sort .Pages ".Params.Position" }}
+	<li><a href="{{.Permalink}}">{{.Title}}</a></li>
+	{{ end }}
+</ol>
+{{else}}
 <ul>
 	{{ range .Pages }}
-	<li>
-		<a href="{{.Permalink}}">{{.Title}}</a>
-	</li>
+	<li><a href="{{.Permalink}}">{{.Title}}</a></li>
 	{{ end }}
 </ul>
+{{end}}
 {{ partial "footer.html" . }}
