@@ -4,17 +4,20 @@
 	{{.Content}}
 </article>
 
-{{if .Params.Position }}
-<ol>
-	{{ range  sort .Pages ".Params.Position" }}
-	<li><a href="{{.Permalink}}">{{.Title}}</a></li>
-	{{ end }}
-</ol>
-{{else}}
-<ul>
-	{{ range .Pages }}
-	<li><a href="{{.Permalink}}">{{.Title}}</a></li>
-	{{ end }}
-</ul>
+{{if not .Params.NoList }}
+	{{if .Params.Position }}
+	<ol>
+		{{ range  sort .Pages ".Params.Position" }}
+		<li><a href="{{.Permalink}}">{{.Title}}</a></li>
+		{{ end }}
+	</ol>
+	{{else}}
+	<ul>
+		{{ range .Pages }}
+		<li><a href="{{.Permalink}}">{{.Title}}</a></li>
+		{{ end }}
+	</ul>
+	{{end}}
 {{end}}
+
 {{ partial "footer.html" . }}
