@@ -6,11 +6,7 @@
 
 {{if not .Params.NoList }}
 	{{if .Params.Position }}
-	<ol>
-		{{ range  sort .Pages ".Params.Position" }}
-		<li><a href="{{.Permalink}}">{{.Title}}</a></li>
-		{{ end }}
-	</ol>
+		{{ partial "list-by-position.html" . }}
 	{{else}}
 	<ul>
 		{{ range .Pages }}

@@ -28,6 +28,14 @@
 	<!--meta itemprop="" content="123"-->
 </article>
 
-{{ partial "nav-next-link.html" . }}
+
+
+{{if .Params.Position }}
+	{{ with .Site.GetPage "/pr" }}
+		{{ partial "list-by-position.html" . }}
+	{{end}}
+{{else}}
+	{{ partial "nav-next-link.html" . }}
+{{end}}
 
 {{ partial "footer.html" . }}
