@@ -28,14 +28,14 @@
 	<!--meta itemprop="" content="123"-->
 </article>
 
+{{ partial "likely.html"}}
 
-
-{{if .Params.Position }}
-	{{ with .Site.GetPage "/pr" }}
-		{{ partial "list-by-position.html" . }}
-	{{end}}
+<nav>
+{{ if eq .Section "pr"}}
+	<h3>Приложение</h3>
+	{{ partial "list-pr-by-position.html" . }}
 {{else}}
 	{{ partial "nav-next-link.html" . }}
 {{end}}
-
+</nav>
 {{ partial "footer.html" . }}

@@ -4,9 +4,10 @@
 	{{.Content}}
 </article>
 
+<nav>
 {{if not .Params.NoList }}
-	{{if .Params.Position }}
-		{{ partial "list-by-position.html" . }}
+	{{if eq .Section "pr" }} 
+		{{ partial "list-pr-by-position.html" . }}
 	{{else}}
 	<ul>
 		{{ range .Pages }}
@@ -15,5 +16,10 @@
 	</ul>
 	{{end}}
 {{end}}
+</nav>
+
+<br>
+{{ partial "likely.html"}}
+<br><br>
 
 {{ partial "footer.html" . }}

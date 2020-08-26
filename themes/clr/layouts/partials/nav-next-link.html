@@ -1,11 +1,9 @@
-<nav>
-	<ul>
-		<li><a href="{{ .Site.BaseURL }}/#оглавление">Оглавление</a></li>
-		{{ with .NextInSection }}
-		<li>Предыдущая: <a href="{{ .Permalink }}">{{ .Title }}</a></li>
-		{{ end }}
-		{{ with .PrevInSection }}
-		<li>Следующая: <a href="{{ .Permalink }}">{{ .Title }}</a></li>
-		{{ end }}
-	</ul>
-</nav>
+<ul>
+	<li><a href="{{ .Site.BaseURL }}/#оглавление">Оглавление</a></li>
+	{{ with .NextInSection }}
+	<li>Предыдущая: <a href="{{ .Permalink }}">{{ .Title }}</a></li>
+	{{ end }}
+	{{ with .PrevInSection }}
+	<li>Следующая: <a href="{{ .Permalink }}">{{ .Title }}</a></li>
+	{{ end }}
+</ul>

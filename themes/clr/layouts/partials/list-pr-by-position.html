@@ -1,0 +1,14 @@
+<ol>
+	{{ $cur := . }}
+	{{ with .Site.GetPage "/pr" }}
+		{{ range  sort .Pages ".Params.Position" }}
+		<li>
+			{{if eq .Permalink $cur.Permalink }}
+				<b>{{.Title}}</b>
+			{{else}}
+				<a href="{{.Permalink}}">{{.Title}}</a>
+			{{end}}
+		</li>
+		{{ end }}
+	{{end}}
+</ol>
