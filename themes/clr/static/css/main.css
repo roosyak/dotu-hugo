@@ -27,6 +27,9 @@ sup a{
 	text-decoration: none;
 	border-bottom: none;
 }
+p+ul{
+	margin-top: -1em;
+}
 
 header:after {
 	content: "";
