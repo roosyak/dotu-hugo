@@ -9,7 +9,7 @@
 
 
 {{ with .Site.GetPage "/pr" }}
-<h3>{{ .Title }}</h3>
+<h3 id="{{ .Title }}">{{ .Title }}</h3>
 <ol>
 	{{ range  sort .Pages ".Params.Position" }}
 	<li><a href="{{.Permalink}}">{{.Title}}</a></li>
